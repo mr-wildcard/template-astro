@@ -1,4 +1,4 @@
-# <img src="https://astro.build/assets/press/astro-logo-dark.png" height="60px" /> template
+# <img src="https://astro.build/assets/press/astro-icon-dark.png" height="60px" /> template
 
 Installation:
 ```
