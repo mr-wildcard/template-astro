@@ -23,7 +23,14 @@ function getSiteURL() {
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [icon(), tailwind(), sitemap()],
+  integrations: [
+    icon(),
+    tailwind({
+      applyBaseStyles: false,
+      nesting: true,
+    }),
+    sitemap(),
+  ],
   site: getSiteURL(),
   vite: {
     plugins: [yaml()],
