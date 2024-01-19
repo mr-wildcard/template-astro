@@ -22,5 +22,15 @@ function getSiteURL() {
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [icon(), tailwind(), sitemap()],
+	integrations: [icon(), tailwind(), sitemap()],site: getSiteURL(),
+  vite: {
+    build: {
+      // mainly for transpiling optional chaining for iOS 12, ffs
+      target: "es2019",
+    },
+  },
+  server: {
+    host: LOCAL_HOST,
+    port: LOCAL_PORT,
+  },
 });
