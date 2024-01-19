@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-label-medium {
+  .responsive-wrapper {
+    @apply px-5 md:px-8 lg:px-[50px] 2xl:px-0;
   }
 }
