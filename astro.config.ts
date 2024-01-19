@@ -10,12 +10,18 @@ const LOCAL_HOST = "localhost";
 function getSiteURL() {
   if (process.env.CF_PAGES) {
     if (process.env.CF_PAGES_BRANCH === "main") {
-      return "https://team-ux-com.pages.dev/";
+      throw new Error(
+        "You need to configure the production URL in astro config file",
+      );
     } else {
-      return `https://${process.env.CF_PAGES_BRANCH}.team-ux-com.pages.dev/`;
+      throw new Error(
+        "You need to configure the Cloudlfare Pages URL in astro config file using pattern `https://${process.env.CF_PAGES_BRANCH}.DOMAIN.pages.dev/`",
+      );
     }
   } else if (process.env.GITHUB_ACTION) {
-    return "https://www.team-ux.com/";
+    throw new Error(
+      "You need to configure the production URL in case build is done made by Github Action",
+    );
   } else {
     return `http://${LOCAL_HOST}:${LOCAL_PORT}/`;
   }
