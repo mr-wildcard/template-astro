@@ -4,7 +4,7 @@ import { type HTMLTag, type Polymorphic } from "astro/types";
 type Props<Tag extends HTMLTag> = Polymorphic<{
   children: any;
   class?: string;
-  as?: Tag;
+  as: Tag;
 }>;
 
 const { as: HTMLTag = "div", class: cssClasses, ...props } = Astro.props;
