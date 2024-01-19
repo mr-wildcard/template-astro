@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 
 const LOCAL_PORT = 4321;
 const LOCAL_HOST = "localhost";
@@ -21,5 +22,5 @@ function getSiteURL() {
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), sitemap()],
+	integrations: [icon(), tailwind(), sitemap()],
 });
