@@ -3,9 +3,13 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 import yaml from "@rollup/plugin-yaml";
+import { loadEnv } from "vite";
 
-const LOCAL_PORT = 4321;
-const LOCAL_HOST = "localhost";
+const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
+  import.meta.env.MODE,
+  process.cwd(),
+  "", // to load all env variables
+);
 
 function getSiteURL() {
   if (process.env.CF_PAGES) {
@@ -20,14 +24,13 @@ function getSiteURL() {
     }
   } else if (process.env.GITHUB_ACTION) {
     throw new Error(
-      "You need to configure the production URL in case build is done made by Github Action",
+      "You need to configure the production URL in case build is done within a Github Action",
     );
   } else {
-    return `http://${LOCAL_HOST}:${LOCAL_PORT}/`;
+    return `http://${ASTRO_DEV_SERVER_LOCAL_HOST}:${ASTRO_DEV_SERVER_LOCAL_PORT}/`;
   }
 }
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     icon(),
@@ -46,7 +49,7 @@ export default defineConfig({
     },
   },
   server: {
-    host: LOCAL_HOST,
-    port: LOCAL_PORT,
+    host: ASTRO_DEV_SERVER_LOCAL_HOST,
+    port: Number(ASTRO_DEV_SERVER_LOCAL_PORT),
   },
 });

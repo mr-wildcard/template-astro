@@ -6,6 +6,14 @@ pnpm create astro@latest --template mr-wildcard/template-astro
 ```
 
 Getting started:
+1. `cp .env .env.local && cp .env .env.production` then replace env variables.
+2. 
+
 ```
 pnpm dev
 ```
+
+
+TODO:
+- [ ] [cache pnpm dependencies](https://github.com/pnpm/action-setup?tab=readme-ov-file#use-cache-to-reduce-installation-time)
+- [ ] test e2e with snapshots for visual diffing
