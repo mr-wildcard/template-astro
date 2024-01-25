@@ -43,6 +43,9 @@ devDependencies:
   cssnano:
     specifier: 6.0.3
     version: 6.0.3(postcss@8.4.33)
+  dotenv:
+    specifier: 16.4.1
+    version: 16.4.1
   postcss:
     specifier: ^8.4.28
     version: 8.4.33
@@ -1850,6 +1853,11 @@ packages:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
       domhandler: 5.0.3
+    dev: true
+
+  /dotenv@16.4.1:
+    resolution: {integrity: sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ==}
+    engines: {node: '>=12'}
     dev: true
 
   /dset@3.1.3:

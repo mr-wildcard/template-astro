@@ -1,9 +1,14 @@
 import * as path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
+import { loadEnv } from "vite";
 
-require("dotenv").config();
+const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
+  "test",
+  process.cwd(),
+  "", // to load all env variables
+);
 
-const baseURL = `http://${process.env.ASTRO_DEV_SERVER_LOCAL_HOST}:${process.env.ASTRO_DEV_SERVER_LOCAL_PORT}/`;
+const baseURL = `http://${ASTRO_DEV_SERVER_LOCAL_HOST}:${ASTRO_DEV_SERVER_LOCAL_PORT}/`;
 
 export default defineConfig({
   testDir: path.join(__dirname, "tests"),
