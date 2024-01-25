@@ -1,6 +1,7 @@
 {
   "name": "template-astro",
   "version": "0.0.1",
+  "packageManager": "pnpm@8",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
