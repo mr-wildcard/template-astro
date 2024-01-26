@@ -6,7 +6,7 @@ pnpm create astro@latest --template mr-wildcard/template-astro
 ```
 
 Getting started:
-1. `cp .env.keep .env.local && cp .env.keep .env.production` then replace env variables.
+1. `cp .env .env.local && cp .env .env.production` then replace env variables.
 2. `pnpm dev`
 
 TODO:
