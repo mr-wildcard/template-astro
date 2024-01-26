@@ -1,12 +1,11 @@
 import * as path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
-import { loadEnv } from "vite";
+import dotenv from "dotenv";
 
-const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
-  "test",
-  process.cwd(),
-  "", // to load all env variables
-);
+dotenv.config();
+
+const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } =
+  process.env;
 
 const baseURL = `http://${ASTRO_DEV_SERVER_LOCAL_HOST}:${ASTRO_DEV_SERVER_LOCAL_PORT}/`;
 
