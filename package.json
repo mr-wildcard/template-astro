@@ -13,22 +13,22 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@astrojs/check": "0.4.1",
-    "@astrojs/sitemap": "3.0.5",
+    "@astrojs/check": "0.5.5",
+    "@astrojs/sitemap": "3.1.1",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/ts-plugin": "1.4.0",
-    "@playwright/test": "1.41.1",
+    "@astrojs/ts-plugin": "1.5.3",
+    "@playwright/test": "1.41.2",
     "@rollup/plugin-yaml": "4.1.2",
-    "@types/node": "20.11.6",
-    "astro": "^4.2.4",
-    "astro-icon": "1.0.2",
+    "@types/node": "20.11.20",
+    "astro": "^4.4.4",
+    "astro-icon": "1.1.0",
     "autoprefixer": "^10.4.17",
-    "cssnano": "6.0.3",
-    "dotenv": "16.4.1",
-    "postcss": "^8.4.33",
-    "prettier": "3.2.4",
+    "cssnano": "6.0.5",
+    "dotenv": "16.4.5",
+    "postcss": "^8.4.35",
+    "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
     "typescript": "5.3.3",
-    "vite": "5.0.12"
+    "vite": "5.1.4"
   }
 }
