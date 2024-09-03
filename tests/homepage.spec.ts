@@ -5,5 +5,5 @@ test("Snapshot homepage", async ({ page }) => {
 
   await page.waitForFunction(() => document.fonts.ready);
 
-  await expect(page.getByRole("list")).toHaveScreenshot();
+  await expect(page).toHaveScreenshot();
 });
