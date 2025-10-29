@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-import yaml from "@rollup/plugin-yaml";
 import { loadEnv } from "vite";
 
 const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
@@ -32,17 +31,10 @@ function getSiteURL() {
 }
 
 export default defineConfig({
-  integrations: [
-    icon(),
-    tailwind({
-      applyBaseStyles: false,
-      nesting: true,
-    }),
-    sitemap(),
-  ],
+  integrations: [icon(), sitemap()],
   site: getSiteURL(),
   vite: {
-    plugins: [yaml()],
+    plugins: [tailwind()],
     build: {
       // mainly for transpiling optional chaining for iOS 12
       target: "es2019",
