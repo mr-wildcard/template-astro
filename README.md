@@ -1,4 +1,4 @@
-# <img src="./doc/astro-dark.svg" height="46px" /> Astro Starter Template
+# <picture><source media="(prefers-color-scheme: dark)" srcset="./doc/astro-dark.svg"><img alt="Astro build!" src="./doc/astro-light.png" height="46px"></picture> Astro Starter Template
 
 Kickstart an Astro project that ships with Tailwind CSS v4, sensible defaults for meta tags and fonts, and Playwright end-to-end tests already wired up.
 
