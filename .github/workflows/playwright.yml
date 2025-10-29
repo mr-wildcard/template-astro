@@ -8,13 +8,52 @@ on:
     paths:
       - "public/**"
       - "src/**"
+  workflow_dispatch:
+    inputs:
+      force_cache_refresh:
+        description: "Set to yes to reinstall browsers even if cache hit"
+        required: false
+        default: "no"
+  schedule:
+    - cron: "0 5 * * 0"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
+  warm-playwright-cache:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Install Playwright Browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true' || (github.event_name == 'workflow_dispatch' && github.event.inputs.force_cache_refresh == 'yes')
+        run: pnpm exec playwright install --with-deps
+
   test:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
