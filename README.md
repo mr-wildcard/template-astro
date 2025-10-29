@@ -4,8 +4,8 @@ Kickstart an Astro project that ships with Tailwind CSS v4, sensible defaults fo
 
 ## Requirements
 
-- Node.js 24.11.0 (see `.nvmrc`)
-- pnpm 10.20.0+
+- Node.js (see `.nvmrc`)
+- pnpm (see `package.json`'s `packageManager` field)
 
 ## Create a new project
 
