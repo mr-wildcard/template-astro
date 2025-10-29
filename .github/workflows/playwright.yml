@@ -50,7 +50,7 @@ jobs:
 
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true' || (github.event_name == 'workflow_dispatch' && github.event.inputs.force_cache_refresh == 'yes')
-        run: pnpm exec playwright install --with-deps
+        run: pnpm exec playwright install --with-deps --no-shell
 
   test:
     if: github.event_name == 'push' || github.event_name == 'pull_request'
@@ -80,7 +80,7 @@ jobs:
           key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install Playwright Browsers
-        run: pnpm exec playwright install --with-deps
+        run: pnpm exec playwright install --with-deps --no-shell
 
       - name: Build application for tests
         run: pnpm build --site http://localhost:4321/
