@@ -15,13 +15,13 @@
     "tailwindcss": "4.1.17"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.5",
+    "@astrojs/check": "0.9.6",
     "@astrojs/sitemap": "3.6.0",
     "@tailwindcss/vite": "4.1.17",
-    "@astrojs/ts-plugin": "1.10.5",
+    "@astrojs/ts-plugin": "1.10.6",
     "@playwright/test": "1.57.0",
     "@types/node": "24.10.1",
-    "astro": "5.16.0",
+    "astro": "5.16.1",
     "astro-icon": "1.1.5",
     "autoprefixer": "10.4.22",
     "cssnano": "7.1.2",
