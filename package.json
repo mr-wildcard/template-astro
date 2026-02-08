@@ -1,7 +1,7 @@
 {
   "name": "template-astro",
   "version": "0.0.3",
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,7 +20,7 @@
     "@tailwindcss/vite": "4.1.18",
     "@astrojs/ts-plugin": "1.10.6",
     "@playwright/test": "1.58.2",
-    "@types/node": "24.10.11",
+    "@types/node": "24.10.12",
     "astro": "5.17.1",
     "astro-icon": "1.1.5",
     "autoprefixer": "10.4.24",
