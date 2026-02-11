@@ -1,7 +1,7 @@
 {
   "name": "template-astro",
   "version": "0.0.3",
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.29.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -21,7 +21,7 @@
     "@astrojs/ts-plugin": "1.10.6",
     "@playwright/test": "1.58.2",
     "@types/node": "24.10.13",
-    "astro": "5.17.1",
+    "astro": "5.17.2",
     "astro-icon": "1.1.5",
     "autoprefixer": "10.4.24",
     "cssnano": "7.1.2",
