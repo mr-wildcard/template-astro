@@ -22,7 +22,7 @@
     "@playwright/test": "1.62.1",
     "@types/node": "24.13.3",
     "astro": "7.2.2",
-    "astro-icon": "1.1.5",
+    "astro-icon": "1.2.0",
     "autoprefixer": "10.5.4",
     "cssnano": "8.0.6",
     "dotenv": "17.4.2",
