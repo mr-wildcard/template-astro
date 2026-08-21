@@ -21,7 +21,7 @@
     "@astrojs/ts-plugin": "1.10.11",
     "@playwright/test": "1.62.1",
     "@types/node": "24.13.3",
-    "astro": "7.2.3",
+    "astro": "7.2.4",
     "astro-icon": "1.2.0",
     "autoprefixer": "10.5.4",
     "cssnano": "8.0.6",
