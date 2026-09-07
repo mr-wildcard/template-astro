@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "3.7.4",
     "@tailwindcss/vite": "4.3.3",
     "@astrojs/ts-plugin": "1.10.11",
-    "@playwright/test": "1.62.1",
+    "@playwright/test": "1.63.0",
     "@types/node": "24.13.3",
     "astro": "7.3.1",
     "astro-icon": "1.2.0",
