@@ -20,7 +20,7 @@
     "@tailwindcss/vite": "4.3.3",
     "@astrojs/ts-plugin": "1.10.11",
     "@playwright/test": "1.63.0",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "astro": "7.3.2",
     "astro-icon": "1.2.0",
     "autoprefixer": "10.5.5",
