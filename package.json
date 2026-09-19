@@ -24,7 +24,7 @@
     "astro": "7.3.3",
     "astro-icon": "1.2.0",
     "autoprefixer": "10.6.1",
-    "cssnano": "9.0.4",
+    "cssnano": "9.0.5",
     "dotenv": "17.4.2",
     "postcss": "8.5.28",
     "prettier": "3.9.7",
