@@ -8,6 +8,9 @@ on:
     paths:
       - "public/**"
       - "src/**"
+      - "tests/**"
+      - "playwright.config.ts"
+      - ".github/workflows/playwright.yml"
   workflow_dispatch:
     inputs:
       force_cache_refresh:
