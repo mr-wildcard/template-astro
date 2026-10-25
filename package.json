@@ -22,21 +22,21 @@
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10",
+    "@astrojs/check": "0.9.12",
     "@astrojs/sitemap": "3.7.4",
     "@tailwindcss/vite": "4.3.3",
     "@astrojs/ts-plugin": "1.10.12",
     "@playwright/test": "1.64.1",
     "@types/node": "24.19.2",
-    "astro": "7.4.0",
+    "astro": "7.4.2",
     "astro-icon": "1.2.0",
     "autoprefixer": "10.6.1",
     "cssnano": "9.9.0",
-    "dotenv": "18.0.8",
+    "dotenv": "18.0.9",
     "postcss": "8.5.31",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.1",
     "typescript": "6.0.3",
-    "vite": "8.3.4"
+    "vite": "8.3.5"
   }
 }
