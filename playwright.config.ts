@@ -42,7 +42,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "pnpm preview",
+    command: "astro preview",
     url: baseURL,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
