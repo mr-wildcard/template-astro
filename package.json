@@ -34,7 +34,7 @@
     "cssnano": "9.9.0",
     "dotenv": "18.0.10",
     "postcss": "8.5.32",
-    "prettier": "3.10.0",
+    "prettier": "3.10.1",
     "prettier-plugin-astro": "1.1.2",
     "typescript": "6.0.3",
     "vite": "8.3.8"
